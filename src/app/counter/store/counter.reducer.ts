@@ -10,7 +10,7 @@ import { degreaseCounterAction } from './actions/degreaseCounter.action';
 import { resetCounterAction } from './actions/resetCounter.action';
 
 
-export const dashboardReducer = createReducer(
+export const counterReducer = createReducer(
   counterInitialState,
   on(
     increaseCounterAction,
@@ -36,5 +36,5 @@ export const dashboardReducer = createReducer(
 )
 
 export function reducers(state: CounterStateInterface, action: Action) {
-  return dashboardReducer(state, action);
+  return counterReducer(state, action);
 }

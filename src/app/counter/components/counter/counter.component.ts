@@ -1,4 +1,4 @@
-import { Component, ElementRef, Signal, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, Signal, ViewChild, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription, fromEvent } from 'rxjs';
 import { counterSelector } from '../../store/counter.selectors';
@@ -10,7 +10,7 @@ import { degreaseCounterAction } from '../../store/actions/degreaseCounter.actio
   selector: 'app-counter',
   templateUrl: './counter.component.html'
 })
-export class CounterComponent {
+export class CounterComponent implements AfterViewInit, OnDestroy {
   @ViewChild('increaseButton', { static: true }) increaseButtonRef!: ElementRef;
   @ViewChild('degreaseButton', { static: true }) degreaseButtonRef!: ElementRef;
   @ViewChild('resetButton', { static: true }) resetButtonRef!: ElementRef;

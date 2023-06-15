@@ -1,0 +1,4 @@
+<section class="product-list">
+    <app-product-card 
+    [product]="product" *ngFor="let product of products(); trackBy:productTrackBy" />
+</section>

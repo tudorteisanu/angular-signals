@@ -12,8 +12,7 @@ import { reducers } from './store/counter.reducer';
   ],
   imports: [
     CommonModule,
-
-    StoreModule.forFeature('dashboard', reducers),
+    StoreModule.forFeature('counter', reducers),
   ],
   exports: [
     CounterComponent
