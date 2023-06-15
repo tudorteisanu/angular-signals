@@ -1,4 +1,11 @@
 <section class="product-list">
-    <app-product-card 
-    [product]="product" *ngFor="let product of products(); trackBy:productTrackBy" />
+        <div  *ngIf="isFetching(); else productsList;">
+            Loading...
+        </div>
+    <ng-template #productsList>
+        <app-product-card 
+        [product]="product"
+         *ngFor="let product of products(); trackBy:productTrackBy" 
+         />
+    </ng-template>
 </section>

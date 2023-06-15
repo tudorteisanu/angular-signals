@@ -30,6 +30,7 @@ export const productsReducer = createReducer(
     (state, action): ProductsStateInterface => ({
       ...state,
       error: action.error,
+      isFetching: false
     }),
   ),
 )
